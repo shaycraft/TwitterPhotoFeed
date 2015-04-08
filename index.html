@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="TwitterPhotoFeed">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Twitter photo feed</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script type="text/javascript" src="TwitterController.js"></script>
+</head>
+<body ng-controller="TwitterController">
+<div id="divInput">
+    <form ng-submit="getPhotoFeed(txtTwitterId)">
+    <span>Twitter Id:</span><input type="text" id="txtTwitterId" ng-model="txtTwitterId" /><input type="submit" />
+    </form>
+</div>
+</body>
+</html>
