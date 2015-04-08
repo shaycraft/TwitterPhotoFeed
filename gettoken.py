@@ -21,6 +21,6 @@ def handler(req):
 
     r = requests.post(oauthurl, data=payload, headers=oauthheaders)
     response = r.text
-    print json.loads(response)['access_token']
+    req.write(json.loads(response)['access_token'])
 
     return apache.OK
