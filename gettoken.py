@@ -4,6 +4,7 @@ import urllib
 import requests
 import base64
 import json
+from mod_python import apache
 
 
 def handler(req):
@@ -21,3 +22,5 @@ def handler(req):
     r = requests.post(oauthurl, data=payload, headers=oauthheaders)
     response = r.text
     print json.loads(response)['access_token']
+
+    return apache.OK
