@@ -9,12 +9,11 @@
 </head>
 <body ng-controller="TwitterController">
 <div id="divInput">
-    <form ng-submit="getPhotoFeed(txtTwitterId)">
+    <form ng-submit="clearMessage(); getPhotoFeed(txtTwitterId)">
     <span>Twitter Id:</span><input type="text" id="txtTwitterId" ng-model="txtTwitterId" /><input type="submit" />
     </form>
 </div>
-<div id="divDebug" style="color: Red;">
-    {{DebugOutput}}
+<div id="divDebug" style="color: Red;" ng-bind-html="DebugOutput | unsafe">
 </div>
 </body>
 </html>
